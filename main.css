@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gabarito', sans-serif;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+/* Config Header */
+header {
+    background-color: #E04040;
+    padding: 8px;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .container h1 {
+    color: #fff;
+    font-style: italic;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav li a{
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    padding-left: 8px;
+}
+
+
+/* Config Sobre a Loja */
+main {
+    background-color: #ccc;
+}
+
+section .container {
+    padding-top: 32px;
+}
+
+section .sobre {
+    display: flex;
+}
+
+section .sobre img {
+    height: 300px;
+    border-radius: 5px;
+    margin-right: 16px;
+}
+
+section .container h2 {
+    color: #E04040;
+    font-style: italic;
+}
+
+.container .description p {
+    margin-top: 32px;
+}
+
+main hr {
+    border: 1px solid #E04040;
+    width: 100%;
+    margin: 16px 0;
+}
+
+/* Config do Grid */
+.product {
+    display: grid;
+    grid-template-columns: repeat(4, 24.25%);
+    column-gap: 1%;
+    row-gap: 5%;
+}
+
+/* Config Produtos */
+#products .container h2 {
+    margin-top: 50px;
+}
+
+.container .product hr {
+    border: 1px solid #E04040;
+    width: 100%;
+    margin: 16px 0;
+}
+
+.container .item img {
+    width: 100%;
+}
+
+.item button {
+    padding: 8px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    background-color: #E04040;
+    color: #fff;
+    cursor: pointer;
+}
+
+.item button:hover {
+    background-color: #f15151;
+}
+
+.product .item  {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.item h3, p {
+    padding: 8px 0;
+}
+
+.item h3, .preco {
+    color: #E04040;
+    font-weight: bold;
+}
+
+
+
+@media screen and (max-width: 640px) {
+    section .container {
+        padding-top: 32px;
+    }
+
+    header .container {
+        justify-content: space-around;
+    }
+
+    header .container h1 {
+        font-size: 28px;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #about .sobre {
+        display: block;
+    }
+
+    .sobre img {
+        width: 100%;
+    }
+
+    .container .description p {
+        margin-top: 16px;
+    }
+
+    #products .container h2 {
+        margin-top: 20px;
+    }
+
+    .product {
+        display: block;
+    }
+
+    .product .item  {
+        display: block;
+    }
+
+    .container {
+        max-width: 90%;
+    }
+
+    .preco button{
+        margin-bottom: 32px;
+    }
+}
+
+
+/* Config  layout Tablet (de 641px até 1023px)*/
+@media screen and (min-width: 641px) and (max-width: 1023px) {
+    #about .sobre {
+        display: block;
+    }
+
+    .sobre img {
+        width: 100%;
+    }
+
+    .container .description p {
+        margin-top: 16px;
+    }
+    
+    .container {
+        max-width: 80%;
+    }
+
+    #products .container h2 {
+        margin-top: 10px;
+    }
+
+    .product {
+        display: grid;
+        grid-template-columns: repeat(2, 49%);
+        column-gap: 2%;
+        row-gap: 2%;
+    }
+} 
